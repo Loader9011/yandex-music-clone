@@ -12,7 +12,7 @@ interface SidebarItemProps{
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = ({
-    icon,
+    icon: Icon,
     label,
     active,
     href,
@@ -35,7 +35,8 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
         transition
         text-neutral-400
         py-1`, active && "text-white", className)}>
-            SideBarItem
+            <Icon className="mx-1" size={24}/>
+            {label}
         </Link>
     )
 }
