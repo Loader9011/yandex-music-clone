@@ -3,7 +3,6 @@
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { RiNeteaseCloudMusicLine  } from "react-icons/ri"
-import { BiSearch } from "react-icons/bi"
 import { IoIosRadio } from "react-icons/io";
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
@@ -42,27 +41,29 @@ const routes = useMemo(() => [
             bg-[#181818]
             h-full
             w-[300px]
-            p-2
             "
             >   
+                
                 <Box>
                     <div className="
                     felx
                     flex-col
                     gap-y-4
-                    px-2
                     py-4
                     ">
                         {routes.map((item) => (
                             <SidebarItem 
-                            className=""
+                            className="
+                            px-2
+                            py-2.5
+                            hover:bg-[#4E4E4E]"
                             key={item.label}
                             {...item}
                             />
                         ))}
                     </div>
                 </Box>
-                <Box className="overflow-y-auto h-full">
+                <Box className="p-2 overflow-y-auto h-full">
                     Song Library
                 </Box>
             </div>
