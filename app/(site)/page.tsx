@@ -3,13 +3,14 @@ import playListRoute from "@/public/playListRoute";
 
 export default function Home() {
   return (
-    <div className="text-green-500 inline-flex">
+    <div className="px-5 -z-10 overflow-hidden inline-flex 
+    hover:-translate-x-10 
+    transition-all">
       {playListRoute.map((item) => (
         <Playlist
           className="
           px-2
-          py-3.5
-        hover:bg-[#4E4E4E]"
+          py-3.5"
           key={item.plName}
           {...item}
         />
