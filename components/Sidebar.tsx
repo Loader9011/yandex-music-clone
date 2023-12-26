@@ -40,7 +40,7 @@ const routes = useMemo(() => [
 ], [pathname])
 
     return(
-        <div className="flex h-full">
+        <div className="flex h-full z-10">
             <div className="
             md:flex
             hidden
@@ -64,7 +64,8 @@ const routes = useMemo(() => [
                             className="
                             px-2
                             py-3.5
-                            hover:bg-[#4E4E4E]"
+                            hover:bg-[#4E4E4E]
+                            transition-all duration-300 ease-in-out"
                             key={item.label}
                             {...item}
                             />
