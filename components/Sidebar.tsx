@@ -1,13 +1,12 @@
 "use client";
 
+import Box from "./Box";
+import SidebarItem from "./SidebarItem";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { RiNeteaseCloudMusicLine  } from "react-icons/ri"
 import { IoIosRadio } from "react-icons/io";
 import { IoBookSharp } from "react-icons/io5"
-import Box from "./Box";
-import SidebarItem from "./SidebarItem";
-import SearchBar from "./SearchBar";
 
 interface SidebarProps{
     children: React.ReactNode
@@ -18,7 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({
 }) => {
     const pathname = usePathname();
 
-const routes = useMemo(() => [
+    const routes = useMemo(() => [
     {
         icon: RiNeteaseCloudMusicLine,
         label: 'Главное',
@@ -38,6 +37,7 @@ const routes = useMemo(() => [
         href: '/books',
     }
 ], [pathname])
+
 
     return(
         <div className="flex h-full z-10">
@@ -78,8 +78,7 @@ const routes = useMemo(() => [
             </div>
             <main className="w-full
             flex-1">
-                <SearchBar className="" placeholder={"Поиск"}></SearchBar>
-                {children}
+            {children}
             </main>
         </div>
     )
